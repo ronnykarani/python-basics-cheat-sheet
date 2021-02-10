@@ -61,7 +61,7 @@ is_new = True
 
 
 #**************************
-#GETTING INPUT FROM THE USER And CONCATENATION
+#GETTING INPUT FROM THE USER AND CONCATENATION
 #Built in function input() is used
 name = input('What is your name? ')
 #input function returns whatever the user enters
@@ -81,14 +81,64 @@ print(new_name + ' likes ' + new_color)
 
 
 #**************************
-#Type Conversion
+#TYPE CONVERSION
 #NB input will always be treated as a string
 #strings can be concatenated together
+#to carry operations on integers ,strings or floats one has to be converted to the others type
 #program that asks for our year of birth, calculates your and prints out our age
-birth_year = input('Year of Birth: ')
 #gets the year of birth and stores it in a variable
-your_age = 2019 - birth_year
-print(your_age)
+age = ()
+birth_year = input('Year of Birth: ')
+print(type(birth_year))
+age = 2019 - int(birth_year)
+print(type(age))
+print(age) 
+#**************************
+#**************************
+#QUIZ
+#As user their weight in pounds convert it to kilograms and print on the terminal
+kgs = ()
+your_weight = input('Whats your weight in pounds: ')
+print(type(your_weight))
+kgs = int(your_weight) * 0.453592
+print(type(kgs))
+print(kgs)
+#**************************
+
+
+#**************************
+#STRINGS 
+#Defined by quotes both single and double
+course = 'Python for beginners'
+print(course)
+#Using quotes in the string might result to it ending prematurely
+#hence need to escape the string with a backslash or use othe quotes
+course = 'Python\'s for beginners'
+course = "Python\'s for beginners"
+course = 'Python for "beginners"'
+print(course) 
+message = '''
+Hi Ron 
+Here is our offer
+Thank you,
+Management
+'''
+print(message)
+#to get characters at a given index in the string we use []
+#pyhton uses zero indexing
+# 0 is the index of the first charcater
+look = 'ronny karani'
+print(look[4])
+#NB the space will also be indexed
+#Using a negative index will give us the characters starting from the end
+# -1 will be the index of last character
+look_one = 'ronny karani'
+print(look_one[-3])
+#using the square brackets to extract a range of characters
+#add : btwn the range (starting from the fast to the second)
+#the character in the second index is not returned
+print(look_one[3:8])
+
 
 
 
