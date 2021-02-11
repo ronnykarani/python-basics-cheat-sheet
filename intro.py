@@ -37,6 +37,7 @@ print(2**3)
 #VARIABLES
 #Identifier is the name of the variable used to identify the variable
 #Variables are used to temporarily store data
+#always use meaningful names for your variables
 #Allow you to store a value by assigning it to a name
 #simple values stored in the variable include int..floats..strings..booleans
 #The value can be used to refer to the value later in the program
@@ -152,6 +153,10 @@ print(another)
 
 new_name = 'joan kanana'
 print(new_name[1:-1]) 
+#NB when you multiply a string by a number the string will be repeated those number of time
+print("ron" * 5)
+#empty strings have no characters
+print('')
 #**************************
 
 
@@ -246,6 +251,7 @@ print(10 % 3)
 print(10 ** 3)
 
 #augmented sign operators/In-place operators
+# = is an assignment operator
 x = 10
 x = x + 3
 print(x)
@@ -359,3 +365,36 @@ has_criminal_record =  False
 
 if has_nice_credit and not has_criminal_record:
     print("Eligible for loan")
+#******************************
+
+
+#******************************
+#COMPARISON OPERATORS
+#used to compare two or more values
+# greater than >
+#less than <
+#equal to == (equality operator)
+#not equal !=
+#greater than or equal to >=
+#less than or equal to <=
+temp = 30
+
+if temp > 30:
+    print("Hot day")
+else:
+    print("Not hot")
+#*************************
+#QUIZ
+#if name is less than 3 characters long return name should be atleast 3 characters wrong
+#otherwise if it is more than 5o characters long name cannot be a max of 50 characters
+#otherwise name looks good
+name = "John"
+
+print(len(name))
+if len(name) < 3:
+    print("Name must be atleast three charactres")
+elif len(name) > 50:
+    print("Name should not be more than fifty character")
+else:
+    print("Name looks good")
+#*******************************
