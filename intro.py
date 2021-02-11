@@ -1,4 +1,7 @@
+#******************************#
 #******PYTHON CHEAT SHEET******#
+#******************************#
+
 
 #**************************
 #PRINTING TEXT
@@ -198,6 +201,7 @@ print(my_title)
 #the find method is used
 #find method is case sensitive
 #when a character thats not in the string is passed a negative will be returned
+lesson = 'Python For Beginners'
 print(lesson.find('P'))
 print(lesson.find('g'))
 print(lesson.find('O'))
@@ -210,7 +214,7 @@ print(lesson.find('Beginners'))
 #the method will take two arguments (character to replace, new character)
 print(lesson.replace('Beginners','Absolute Beginners'))
 #the method is also case sensitive
-print(lesson.find('P', 'J'))
+print(lesson.find('P','J'))
 
 #another sequence is to check existence of a character or sequence in a string
 #in operator is used
@@ -224,3 +228,134 @@ print('ronny' in my_name)
 
 #**************************
 #ARITHMETIC OPERATIONS
+#addition
+print(10 + 2)
+#subtraction
+print(10 - 2)
+#multiplication
+print(10 * 2)
+#division
+#gets a float(/) 0r an intrger(//)
+print(10 / 3)
+print(10 / 2)
+print(10 // 3)
+print(10 // 2)
+#modulus(gets remainder of the division)
+print(10 % 3)
+#exponent(power)
+print(10 ** 3)
+
+#augmented sign operators/In-place operators
+x = 10
+x = x + 3
+print(x)
+#above operation is simplified by augmentation
+y = 10
+y += 3
+print(y)
+#augmented assign operator can be used in other arithmetic operation(-, *, / ..etc)
+z = 10
+z -= 3
+print(z)
+#******************************
+
+
+#******************************
+#OPERATOR PRECEDENCE
+#some operators have a higher precedence compared to others
+a = 10 + 3 * 2
+print(a)
+# order fom the highest precedence exponentiation, multiplication or division, addition or subtraction
+b = 10 + 3 * 2 ** 2
+print(b) 
+#parentheses can be used to change the order of opeeration
+#parentheses will always take the first priority
+c = (10 + 3) * 2 ** 2
+print(c) 
+#*************************
+
+
+#*************************
+#MATH OPERATIONS
+#rounding the nummber
+#to round a number you can use a built in function called round
+d = 2.7
+print(round(d))
+#abs for absolute value always return the positive value
+e = -3.5
+print(abs(e))
+#other math operations (complex) can be carried out by importing amath module
+#a module is a separate file with reusable code
+import math 
+print(math.ceil(2.8))
+print(math.ceil(2.3))
+#ceil returns the next whole number
+print(math.floor(2.8))
+print(math.floor(2.3))
+#floor will return the previous whole number
+#************************
+
+
+#************************
+#IF STATEMENTS
+#Allow building of programs that can make decisions based on some conditions
+#if a condition is true do sth otherwise do sth else
+#if statemnets should be indented
+is_hot = False #could be true or false
+is_cold = True #could be true or false
+
+if is_hot:
+    print("It's a hot day")
+    print("Drink plenty of water")
+elif is_cold:
+    print("It's a cold day")
+    print("Wear warm clothes")
+else:
+    print("It's a cold day")
+
+print("ENJOY YOUR DAY") 
+#if statements can be used to build rules into the program
+#********************************
+#QUIZ
+#Price of a house is $1M
+#If buyer has good credit they need to put down 10%
+#otherwise the need to put down 20%
+#Write a program with this rules and display thre down payment required
+#for a buyer with good credit
+price = 1000000
+good_credit = True
+
+if good_credit:
+    down_payment = 0.1 * price 
+else:
+    down_payment = 0.2 * price 
+print(f"Down payment: ${down_payment}")
+#************************
+
+
+#************************
+#LOGICAL OPERATORS
+#used in situations with multiple conditions
+# AND  used to combine both conditions
+#requires both conditions to evaluate to true
+high_income = True
+has_good_credit = True
+
+if high_income and has_good_credit:
+    print("Eligible for loan")
+
+# OR used to check if either of the conditions is true
+#requires one condition to be true
+high_salary = True
+has_better_credit = False
+
+if high_salary or has_better_credit:
+    print("Eligible for loan")
+
+#NOT inverses boolean value
+#true to false and vice versa
+has_nice_credit = True
+has_criminal_record =  False
+
+if has_nice_credit and not has_criminal_record:
+    print("Eligible for loan")
