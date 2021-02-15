@@ -85,13 +85,42 @@ print(square(3))
 #**************************************************
 #CREATING A REUSABLE FUNCTION
 #**************************************************
+def emoji_converter(message):
+    words = message.split(' ')
+    emojis = {
+        ":)": "👍",
+        ":(" : "👎"
+    }
+    output = ""
+    for word in words:
+        output += emojis.get(word, word) + " "
+    return output
+
+
 message = input(">")
-words = message.split(' ')
-emojis = {
-    ":)": "👍",
-    ":(" : "👎"
-}
-output = ""
-for word in words:
-    output += emojis.get(word, word) + " "
-print(output)
+print(emoji_converter(message))
+#*************************************************
+
+
+#*************************************************
+#EXCEPTION HANDLING
+#*************************************************
+#try the code will try and run the code
+#except handles the error  expected from the code
+#different exception catch different types of errors
+try:
+    age = int(input('age:'))
+    print(age)
+except ValueError:
+    print('invalid value')
+#*************************************************
+
+
+#************************************************
+#COMMENTS
+#************************************************
+#used to add comments 
+
+
+#***********************************************
+#CLASSES
