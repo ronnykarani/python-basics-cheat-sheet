@@ -124,3 +124,91 @@ except ValueError:
 
 #***********************************************
 #CLASSES
+#classes are used to define new types to modelreal concepts
+#convention used in naming classes(Pascal) is different from variables and functions
+class Point:
+    def move(self):
+        print('move')
+        
+    def draw(self):
+        print('draw')
+
+
+point1 = Point()
+point1.x= 10
+point1.y = 20
+print(point1.x)
+point1.draw()
+
+point2 = Point()
+point2.x= 10
+point2.y = 20
+print(point1.x)
+point1.draw()
+#***********************************************
+
+
+#***********************************************
+#CONSTRUCTORS
+#***********************************************
+#A function that gets called at the time when creating an object
+class Point:
+    #the init method gets called when we create a new point object
+    def __init__(self, x, y):#this methods constructs/creates an object
+        self.x = x#initializing the object
+        self.y = y#self acts as a reference to the  current object
+        
+    def move(self):
+        print('move')
+        
+    def draw(self):
+        print('draw')
+        
+
+point = Point(10,20)
+point.x = 11 #updates value
+print(point.x)
+
+
+class Person:#define the person class
+    def __init__(self, name):
+        self.name = name#self refernces the current object
+    #above code sets the name attribute of  the current object to the name argument passed
+    def talk(self):#with this self we can get reference tothe current object 
+        print(f'Hi, I am {self.name}')
+
+
+john = Person("john smith")
+john.talk()
+
+bob = Person("bob smith")
+bob.talk() 
+#each object is a different instance of a person class  
+#***********************************************
+
+
+#**********************************************
+#INHERITANCE
+#*********************************************
+#is a mechanism for re-using code
+class Mammal:
+    def walk(self):
+        print('walk')
+
+
+class Dog(Mammal):
+    def bark(self):
+        print("woof")
+
+
+class Cat(Mammal):
+    def purr(self):
+        print("meow")
+
+
+dog1 =Dog()
+dog1.bark()
+
+cat1 =Cat()
+cat1.purr()
+#******************************************
